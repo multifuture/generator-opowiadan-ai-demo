@@ -1,0 +1,15 @@
+# virtual env
+venv/
+.venv/
+
+# cache
+__pycache__/
+
+# editor settings
+.vscode/
+
+# OS junk
+.DS_Store
+
+# Streamlit secrets (KLUCZOWE)
+.streamlit/secrets.toml
