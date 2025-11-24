@@ -19,7 +19,7 @@ Aplikacja Streamlit, która generuje krótkie opowiadania na podstawie wybranego
 
 ## 🚀 Demo
 
-🔗 **(tu link po wdrożeniu na Streamlit Cloud)**
+🔗 **(tu dodasz link po wdrożeniu na Streamlit Cloud)**
 
 ---
 
@@ -47,12 +47,12 @@ Zanim uruchomisz aplikację, upewnij się, że masz:
   Potrzebujesz aktywnego klucza API, aby aplikacja mogła komunikować się z modelem GPT i generować treści.  
 - *(Opcjonalnie, ale zalecane)* **Git** i edytor kodu (np. VS Code), jeśli chcesz rozwijać projekt dalej.
 
-Aplikacja była testowana na Windows; powinna działać również na macOS i Linux przy spełnieniu powyższych warunków.
+Aplikacja była testowana na Windows i Linux; powinna działać również na macOS przy spełnieniu powyższych warunków.
 
 ---
 
 ### 2. Sklonuj repozytorium
 
 ```bash
-git clone https://github.com/USER/REPO_NAME.git
-cd REPO_NAME
+git clone https://github.com/multifuture/generator-opowiadan-ai.git
+cd generator-opowiadan-ai
