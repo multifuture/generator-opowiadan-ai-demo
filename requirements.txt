@@ -1,3 +1,4 @@
-streamlit
-openai
-langfuse>=2.50.0
+streamlit==1.46.0
+openai==1.99.9
+langfuse==2.50.0
+requests>=2.31.0

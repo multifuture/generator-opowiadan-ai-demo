@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from openai import OpenAI
 import time
@@ -16,13 +17,29 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+def get_secret(name, default=None):
+    """Pobiera sekrety najpierw ze st.secrets, a jak ich nie ma – z ENV (np. na DO)."""
+    try:
+        if name in st.secrets:
+            return st.secrets[name]
+    except Exception:
+        pass
+    return os.getenv(name, default)
+
 # Initialize Langfuse
 try:
-    langfuse = Langfuse(
-        secret_key=st.secrets["LANGFUSE_SECRET_KEY"],
-        public_key=st.secrets["LANGFUSE_PUBLIC_KEY"],
-        host=st.secrets.get("LANGFUSE_HOST", "https://cloud.langfuse.com")
-    )
+    langfuse_secret = get_secret("LANGFUSE_SECRET_KEY")
+    langfuse_public = get_secret("LANGFUSE_PUBLIC_KEY")
+    langfuse_host = get_secret("LANGFUSE_HOST", "https://cloud.langfuse.com")
+
+    if langfuse_secret and langfuse_public:
+        langfuse = Langfuse(
+            secret_key=langfuse_secret,
+            public_key=langfuse_public,
+            host=langfuse_host,
+        )
+    else:
+        langfuse = None
 except Exception as e:
     st.error(f"Błąd inicjalizacji Langfuse: {e}")
     langfuse = None
@@ -101,7 +118,7 @@ if not st.session_state.authenticated:
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         if st.button("🚀 Uzyskaj dostęp", use_container_width=True, type="primary"):
-            if password == st.secrets.get("ACCESS_PASSWORD", "demo2024"):
+            if password == get_secret("ACCESS_PASSWORD", "demo2024"):
                 st.session_state.authenticated = True
                 st.session_state.auth_expiry = datetime.now() + timedelta(hours=24)
                 st.success("✅ Dostęp przyznany na 24 godziny!")
@@ -390,7 +407,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Initialize OpenAI client
-openai_client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+openai_api_key = get_secret("OPENAI_API_KEY")
+if not openai_api_key:
+    st.error("Brak klucza OPENAI_API_KEY w secrets lub zmiennych środowiskowych.")
+    st.stop()
+
+openai_client = OpenAI(api_key=openai_api_key)
 
 def count_words_and_sentences(text):
     words = len(text.split())
@@ -690,7 +712,7 @@ Requirements:
                 generation.end(
                     output=image_url,
                     metadata={
-                        "revised_prompt": response.data[0].revised_prompt if hasattr(response.data[0], 'revised_prompt') else None
+                        "revised_prompt": getattr(response.data[0], "revised_prompt", None)
                     }
                 )
             except:

@@ -11,8 +11,8 @@ __pycache__/
 # OS junk
 .DS_Store
 
-# Streamlit secrets (KLUCZOWE)
-.streamlit/secrets.toml
+# Streamlit local config & secrets
+.streamlit/
 
-# Langfuse OpenAI digital
+# Local env for testing
 .env
