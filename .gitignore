@@ -13,3 +13,6 @@ __pycache__/
 
 # Streamlit secrets (KLUCZOWE)
 .streamlit/secrets.toml
+
+# Langfuse OpenAI digital
+.env
