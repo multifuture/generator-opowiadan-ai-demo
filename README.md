@@ -1,61 +1,91 @@
-# ✨ Generator Opowiadań AI - Demo
+# 🧚 Generator Bajek AI dla Dzieci - LEAN Edition
 
-Interaktywna aplikacja webowa do generowania spersonalizowanych opowiadań z ilustracjami przy użyciu GPT-4o i DALL-E 3. Projekt demonstracyjny pokazujący integrację dużych modeli językowych z interfejsem użytkownika, monitoring Langfuse oraz zabezpieczenia treści.
+> Spersonalizowana bajka z audio w 2 minuty! Prosta, szybka, magiczna. ✨
+
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-green.svg)](https://openai.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## 🎯 Funkcje
+## ✨ Funkcje
 
-### **Generowanie opowiadań:**
-- ✨ **3 gatunki literackie:** Bajka, Romans, Kryminał
-- 🎭 **Dynamiczne tony narracji:** Każdy gatunek ma 3 unikalne tony (np. Bajka: Zabawna, Magiczna, Mądra)
-- 📏 **3 długości:** Krótka (~100-200 słów), Średnia (~200-400 słów), Długa (~400-600 słów)
-- 🎨 **Generowanie ilustracji:** DALL-E 3 tworzy profesjonalne ilustracje dopasowane do opowiadania
-- 💾 **Pobieranie:** Eksport opowiadania do `.txt` i ilustracji do `.png`
+### **Generowanie bajek:**
+- 🎯 **Szybka personalizacja** - tylko imię, wiek, wartość edukacyjna
+- 🎧 **Audio narration** - profesjonalny głos Nova (OpenAI TTS)
+- ⚡ **Błyskawiczne** - bajka gotowa w ~20 sekund
+- 💰 **Tanie** - ~$0.016 za kompletną bajkę z audio
+- 📱 **Mobile-friendly** - prosty, jednoekranowy formularz
+- 🛡️ **Bezpieczne** - wzmocnione filtry treści dla dzieci
 
-### **Bezpieczeństwo i jakość:**
-- 🛡️ **Filtry bezpieczeństwa treści:** Specyficzne dla każdego gatunku (brak przemocy, wulgaryzmów, treści +18)
-- 🔒 **Zabezpieczenie hasłem:** Demo dostępne przez 24h po zalogowaniu
-- 📊 **Langfuse monitoring:** Automatyczne śledzenie kosztów, tokenów i jakości odpowiedzi
+### **Personalizacja:**
+- 👶 **Wiek dziecka:** 3-5 lat, 6-8 lat, 9-12 lat (automatycznie dostosowany język)
+- 💡 **10 wartości edukacyjnych:** Odwaga, Przyjaźń, Uczciwość, Dobroć, Wytrwałość...
+- ✏️ **Pomysł na bajkę:** Opcjonalny (lub losowa magiczna przygoda)
+- 🎵 **Ton:** Uniwersalny (ciepły, magiczny, z nutką humoru)
 
-### **Interfejs użytkownika:**
-- ❄️ **Animowane tło:** Płatki śniegu (sezonowe, można zmienić na gwiazdki)
-- 📱 **Responsywny design:** Działa na desktop i mobile
-- 📚 **Historia opowiadań:** Sidebar z ostatnimi 5 wygenerowanymi historiami
-- 📊 **Statystyki:** Liczba słów, zdań, szacowany czas czytania
+### **Output:**
+- 📖 **Tekst bajki** - 250-500 słów (zależnie od wieku)
+- 🎧 **Plik MP3** - audio narration do pobrania
+- 📊 **Statystyki** - liczba słów, zdań, czas czytania
+- 💾 **Download** - TXT + MP3
 
 ---
 
 ## 🚀 Demo na żywo
 
-🔗 **[Zobacz demo](https://twoj-link-do-demo.streamlit.app)** *(dostępne po wdrożeniu)*
+🔗 **[Zobacz demo](https://generator-bajek-ai.streamlit.app)** *(link po wdrożeniu)*
 
-**Kod dostępu:** Skontaktuj się, aby otrzymać hasło demo (ważne 24h)
+**Dostęp:** Bez logowania (wersja testowa)
 
 ---
 
-## 📸 Screenshot
+## 📸 Screenshots
 
-*(Dodaj screenshot aplikacji tutaj)*
+*(Dodaj screenshot tutaj - landing page i formularz)*
+
+---
+
+## 💡 Dlaczego LEAN?
+
+### Problem z klasycznymi generatorami:
+- ❌ Zbyt skomplikowane (5+ kroków)
+- ❌ Drogie (GPT-4o + DALL-E 3)
+- ❌ Wolne (60+ sekund)
+- ❌ Decision fatigue (za dużo opcji)
+
+### Rozwiązanie LEAN:
+- ✅ **2 kroki:** Formularz → Generuj
+- ✅ **Tanie:** GPT-4o-mini + TTS = $0.016/bajka
+- ✅ **Szybkie:** ~20 sekund total
+- ✅ **Proste:** Tylko kluczowe opcje
+- ✅ **Audio:** Czytanie przed snem!
+
+### Rezultat:
+- 💰 **77% oszczędności** kosztów vs wersja Full
+- ⚡ **67% szybsze** generowanie
+- 🎯 **60% mniej kroków** w UI
+- ✨ **100% jakości** bajek
 
 ---
 
 ## 🛠 Tech Stack
 
-**Backend:**
-- Python 3.11+
-- Streamlit 1.32+
-- OpenAI API (GPT-4o + DALL-E 3)
-- Langfuse 2.50+ (monitoring i analytics)
+**AI Models:**
+- OpenAI GPT-4o-mini (generowanie tekstu)
+- OpenAI TTS (głos Nova, audio narration)
 
-**Frontend:**
-- Custom CSS z animacjami
-- Responsive layout
-- Pills UI pattern
+**Framework:**
+- Streamlit 1.28+
+- Python 3.11+
+
+**Monitoring (opcjonalnie):**
+- Langfuse (koszty, tokeny, analytics)
 
 **Deployment:**
-- Streamlit Cloud / DigitalOcean
-- Secrets management via `.streamlit/secrets.toml`
+- Streamlit Cloud (darmowy)
+- DigitalOcean App Platform ($5/m)
 
 ---
 
@@ -64,42 +94,43 @@ Interaktywna aplikacja webowa do generowania spersonalizowanych opowiadań z ilu
 ### **1. Wymagania**
 
 **System:**
-- Python 3.11+ *(testowane na 3.11.13)*
+- Python 3.11+ *(testowane na 3.11)*
 - pip 23+
 - Git
 
-**Konta i klucze API:**
-- [OpenAI API key](https://platform.openai.com/api-keys) - dla GPT-4o i DALL-E 3
-- [Langfuse account](https://cloud.langfuse.com) - darmowe konto (public key + secret key)
+**Konta API:**
+- [OpenAI API key](https://platform.openai.com/api-keys) - GPT-4o-mini + TTS
+- [Langfuse account](https://cloud.langfuse.com) - opcjonalnie (monitoring)
 
-**Koszty API:** *(szacunkowe, zależne od użycia)*
-- GPT-4o: ~$0.005-0.015 za opowiadanie (w zależności od długości)
-- DALL-E 3: ~$0.04 za ilustrację (1024x1024, standard quality)
+**Koszty API:** *(przy 100 bajek/miesiąc)*
+- GPT-4o-mini: ~$0.10/100 bajek
+- OpenAI TTS: ~$1.50/100 bajek
+- **TOTAL: ~$1.60/100 bajek** vs $7/100 w wersji Full
 
 ---
 
 ### **2. Sklonuj repozytorium**
 
 ```bash
-git clone https://github.com/multifuture/generator-opowiadan-demo.git
-cd generator-opowiadan-demo
+git clone https://github.com/twoj-user/generator-bajek-ai-demo.git
+cd generator-bajek-ai-demo
 ```
 
 ---
 
 ### **3. Zainstaluj zależności**
 
-**Stwórz środowisko wirtualne (zalecane):**
+**Stwórz środowisko wirtualne:**
 
 ```bash
-# Conda
-conda create -n story_gen python=3.11
-conda activate story_gen
+# Conda (zalecane)
+conda create -n bajki_ai python=3.11
+conda activate bajki_ai
 
 # lub venv
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate  # Windows
+# venv\Scripts\activate   # Windows
 ```
 
 **Zainstaluj pakiety:**
@@ -110,192 +141,239 @@ pip install -r requirements.txt
 
 ---
 
-### **4. Konfiguracja kluczy API**
+### **4. Konfiguracja API**
 
-**Stwórz plik `.streamlit/secrets.toml`:**
+**Stwórz `.streamlit/secrets.toml`:**
 
 ```bash
 mkdir .streamlit
 touch .streamlit/secrets.toml  # Linux/Mac
-# lub stwórz ręcznie w Windows
+# lub ręcznie w Windows
 ```
 
 **Dodaj klucze:**
 
 ```toml
-# OpenAI
+# OpenAI API (WYMAGANE)
 OPENAI_API_KEY = "sk-proj-twoj_klucz_tutaj"
 
-# Access password (24h demo)
-ACCESS_PASSWORD = "twoje_haslo_demo"
-
-# Langfuse
+# Langfuse (OPCJONALNE - dla monitoringu)
 LANGFUSE_PUBLIC_KEY = "pk-lf-twoj_klucz"
 LANGFUSE_SECRET_KEY = "sk-lf-twoj_klucz"
 LANGFUSE_HOST = "https://cloud.langfuse.com"
 ```
 
 **⚠️ WAŻNE:** 
-- Nigdy nie commituj pliku `secrets.toml` do repozytorium!
-- Plik jest już w `.gitignore`
+- Nie commituj `secrets.toml` do repo!
+- Jest w `.gitignore`
 
 ---
 
-### **5. Dodaj logo (opcjonalne)**
+### **5. Uruchom**
 
 ```bash
-mkdir assets
-# Skopiuj swoje logo do assets/logo.png
+streamlit run app_demo_voice.py
 ```
 
-Jeśli nie masz logo, zakomentuj sekcję z logo w kodzie lub usuń odniesienie.
-
----
-
-### **6. Uruchom aplikację**
-
-```bash
-streamlit run app.py
-```
-
-Aplikacja otworzy się w przeglądarce pod adresem: `http://localhost:8501`
+Aplikacja otworzy się: `http://localhost:8501`
 
 ---
 
 ## 📦 Struktura projektu
 
 ```
-generator-opowiadan-demo/
-├── app_demo.py                      # Główny plik aplikacji
-├── requirements.txt            # Zależności Python
-├── README.md                   # Ten plik
-├── .gitignore                  # Pliki ignorowane przez Git
-├── .streamlit/
-│   └── secrets.toml           # Klucze API (NIE commitować!)
-└── assets/
-    └── logo.png               # Logo Multi-Future (opcjonalne)
+generator-bajek-ai-demo/
+├── app_demo_voice.py       # Główna aplikacja
+├── requirements.txt        # Dependencies
+├── README.md               # Ten plik
+├── CHANGELOG.md            # Historia zmian
+├── .gitignore              # Git ignore rules
+└── .streamlit/
+    └── secrets.toml        # API keys (NIE commitować!)
 ```
 
 ---
 
 ## 🎨 Customizacja
 
-### **Zmiana kolorów tła:**
+### **Zmiana głosu TTS:**
 
-W pliku `app.py`, znajdź sekcję CSS (linia ~170):
+W pliku `app_demo_voice.py`, linia ~738:
 
-```css
-.stApp {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+```python
+response = openai_client.audio.speech.create(
+    model="tts-1",
+    voice="nova",  # Zmień na: alloy, echo, fable, onyx, shimmer
+    input=story_content
+)
+```
+
+Dostępne głosy:
+- `nova` - Kobiecy, ciepły (domyślny)
+- `shimmer` - Kobiecy, energiczny
+- `alloy` - Neutralny
+- `echo` - Męski, spokojny
+
+---
+
+### **Zmiana długości bajek:**
+
+Linia ~491:
+
+```python
+target_words = {
+    "3-5 lat": "250-300",   # Zmień liczby
+    "6-8 lat": "350-400", 
+    "9-12 lat": "400-500"
 }
 ```
 
-Zmień kolory hex na własne.
-
 ---
 
-### **Zmiana animacji (śnieżynki → gwiazdki):**
+### **Dodanie nowych wartości:**
 
-W sekcji CSS, zmień `.particle` (linia ~210):
+Linia ~773:
 
-```css
-.particle {
-    background: rgba(255, 215, 0, 0.8);  /* Złoty kolor */
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-}
+```python
+lesson_options = [
+    "Odwaga",
+    "Przyjaźń",
+    "Twoja nowa wartość",  # Dodaj tutaj
+    # ...
+]
 ```
 
 ---
 
-### **Wyłączenie generowania obrazów:**
+## 📊 Monitoring (Langfuse)
 
-Zakomentuj przycisk "Generuj grafikę" w sekcji Action buttons (linia ~1020).
+Jeśli skonfigurowałeś Langfuse, zobacz dashboard:
 
----
-
-## 📊 Monitoring w Langfuse
-
-Po uruchomieniu aplikacji i wygenerowaniu opowiadań, zaloguj się do [Langfuse Dashboard](https://cloud.langfuse.com):
+**[Langfuse Cloud](https://cloud.langfuse.com)**
 
 **Co zobaczysz:**
-- 📈 **Traces:** Każde wywołanie GPT-4o i DALL-E 3
-- 💰 **Koszty:** Automatycznie liczone per request
-- 🔢 **Tokeny:** Input/output dla każdego requestu
-- ⏱️ **Latency:** Czas odpowiedzi API
-- 📝 **Pełne prompty:** System + user messages
+- 💰 Koszty per bajka
+- 🔢 Tokeny (input/output)
+- ⏱️ Latency (czas odpowiedzi)
+- 📝 Pełne prompty
+- 📈 Trendy użycia
 
 ---
 
 ## 🔒 Bezpieczeństwo
 
-**Obecne zabezpieczenia:**
-- ✅ Hasło dostępu (24h sesja)
-- ✅ Klucze API w `secrets.toml` (nie w kodzie)
-- ✅ Content safety rules dla każdego gatunku
-- ✅ Rate limiting (poprzez session state)
+**Zabezpieczenia treści:**
+- 15+ zakazanych tematów
+- Zero przemocy, śmierci, strachu
+- Tylko pozytywne emocje
+- Enhanced safety prompt
+- Critical safety instruction
 
 **Dla produkcji dodaj:**
-- 🔐 OAuth/SSO dla użytkowników
+- 🔐 Logowanie użytkowników
 - 💳 System płatności
 - 📊 Rate limiting per user
-- 🛡️ CORS i CSP headers
-- 📝 Logging i audit trail
+- 🛡️ Content moderation API
 
 ---
 
-## 💡 Rozwój projektu
+## 💡 Rozwój
 
 **Możliwe rozszerzenia:**
-- 🌍 Tłumaczenie opowiadań na inne języki
-- 🎙️ Text-to-speech (odczytywanie opowiadań)
-- 📖 Eksport do PDF z formatowaniem
-- 🎨 Wybór stylu ilustracji przez użytkownika
-- 👥 Multi-user support z kontami
-- 💾 Baza danych dla opowiadań
-- 🔄 Regeneracja fragmentów opowiadania
-- ⭐ System ocen i ulubione opowiadania
+- 🌍 Multi-language (EN, DE, FR)
+- 🎨 Proste ilustracje (Stable Diffusion)
+- 🎙️ Wybór głosu przez użytkownika
+- 📖 Eksport do PDF
+- 👥 Konta użytkowników
+- 💾 Historia bajek w bazie danych
+- ⭐ System ocen
+- 📧 Email delivery
 
 ---
 
-## 🐛 Znane problemy
+## 📊 Porównanie z wersją Full
 
-**Deprecation warning:**
+| Cecha | Full (v1.0) | LEAN (v2.0) |
+|-------|-------------|-------------|
+| Model tekstu | GPT-4o | GPT-4o-mini |
+| Obrazy | DALL-E 3 | ❌ |
+| Audio | ❌ | OpenAI TTS |
+| Kroki UI | 5 | 2 |
+| Koszt/bajka | $0.07 | $0.016 |
+| Czas | 60s | 20s |
+| Use case | Kompletny | Szybki MVP |
+
+---
+
+## 🐛 Troubleshooting
+
+**Błąd: "No module named 'openai'"**
+```bash
+pip install openai --upgrade
 ```
-use_column_width parameter has been deprecated
-```
-**Fix:** Zamień `use_column_width=True` na `use_container_width=True` w linii ~1040
+
+**Błąd: UTF-8 encoding (Windows)**
+- Jest naprawione w kodzie (linie 13-19)
+- Restart aplikacji powinien pomóc
+
+**Langfuse nie działa**
+- Sprawdź klucze w secrets.toml
+- Aplikacja działa bez Langfuse (opcjonalnie)
+
+**Audio się nie generuje**
+- Sprawdź klucz OpenAI
+- Sprawdź limity API (quota)
 
 ---
 
 ## 📝 Licencja
 
-MIT License - możesz swobodnie używać i modyfikować projekt.
+MIT License - swobodne użycie i modyfikacje.
 
 ---
 
 ## 👨‍💻 Autor
 
 **Multi-Future**  
-🌐 [www.multi-future.pl](https://www.multi-future.pl)  
-💼 Data Science | AI Automation | Business Solutions
+🌐 [multi-future.pl](https://multi-future.pl)  
+💼 Data Science | AI Automation | Business Training
+
+**Przemek** - Data Scientist z 15-letnim doświadczeniem B2B  
+📚 Od sprzedaży do AI w 6 miesięcy
 
 ---
 
-## 🙏 Podziękowania
+## 🙏 Credits
 
-- OpenAI za GPT-4o i DALL-E 3
-- Streamlit za framework
-- Langfuse za monitoring tools
+- OpenAI (GPT-4o-mini, TTS)
+- Streamlit (framework)
+- Langfuse (monitoring)
 
 ---
 
 ## 📧 Kontakt
 
-Pytania? Problemy? Chcesz współpracować?
+Pytania? Współpraca?
 
-📩 przemek@multi-future.pl 
-🔗 [GitHub Issues](https://github.com/multifuture/generator-opowiadan-demo/issues)
+📩 Email me  
+🔗 [GitHub Issues](https://github.com/twoj-user/generator-bajek-ai-demo/issues)  
+💼 [LinkedIn](https://linkedin.com/in/twoj-profil)
 
 ---
 
-**⭐ Jeśli projekt Ci się podoba, zostaw gwiazdkę na GitHub!**
+**⭐ Jeśli projekt Ci się podoba, zostaw gwiazdkę!**
+
+---
+
+## 📈 Roadmap
+
+### v2.1 (Planowane)
+- [ ] Wybór głosu TTS (6 opcji)
+- [ ] Multi-language support
+- [ ] Eksport do PDF z formatowaniem
+
+### v3.0 (Przyszłość)
+- [ ] Proste ilustracje (Stable Diffusion)
+- [ ] Konta użytkowników
+- [ ] Premium tier (GPT-4o, więcej opcji)
+- [ ] Mobile app (React Native)
